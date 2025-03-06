@@ -10,16 +10,19 @@ const InputSearch = () => {
     const handleSearch = (e) => {
         e.preventDefault();
         const keyword = searchRef.current.value;
-        router.push(`/search/${keyword}`)
+        if(keyword) {
+            router.push(`/search/${keyword}`)
+        }
     }
     
     return (
         <div className="relative">
-            <form action="" onSubmit={handleSearch}>
-                <input type="text" 
-                placeholder="Cari anime..." 
-                className="p-1 rounded w-full"
-                ref={searchRef}
+            {/* menggunakan form untuk elemen yang semantik dan meningkatkan user experience daripada menggunakan keydown */}
+            <form action="" onSubmit={handleSearch}> 
+                    <input type="text" 
+                    placeholder="Cari anime..." 
+                    className="p-1 rounded w-full"
+                    ref={searchRef}
                 />
                 <button type="submit" className="absolute top-1 end-1">
                     <MagnifyingGlass size={24} />

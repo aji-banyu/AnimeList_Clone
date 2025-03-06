@@ -1,0 +1,7 @@
+{
+    "editor.detectIndentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.guides.indentation": true,
+    "editor.renderWhitespace": "none",
+    "editor.experimentalWhitespaceRendering": "svg"
+}
